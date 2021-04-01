@@ -2,20 +2,15 @@
 
 int main() {
     int arr[8][8];
-    int kingY , kingX;
     int rookY[2] , rookX[2] , rookCnt =0;
 
   //Please Enter Your Code Here
-    for(int i =8; i<8; i++){
+    for(int i =0; i<8; i++){
         for(int j=0;j<8; j++){
             scanf("%d" , &arr[i][j]);
-            
-            if(arr[i][j] ==1){
-                kingY =i;
-                kingX = j;
-            }
-
-            else if(arr[i][j] ==2){
+           
+           
+            if(arr[i][j] ==2){
                 // rook o roox o 첫번째 발견되는룩
                 // rooky 1 roo x 1  두번째 발견되는 룩의 좌푠
                 rookY[rookCnt] = i;
@@ -27,33 +22,36 @@ int main() {
     }
 
     bool flag = false; //잡을 수 없다면 false ,  잡 을 수있다면 true
-    int ry = rookY[0] , rx = rookX[0];
-
-    for(int i= rx+1; i<8;i++){
-        if(arr[ry][i] ==1) flag = true;
-        else if(arr[ry][i] ==3)break;
-    }
-
-    for(int i =ry-1; i>=0; i--){
-        if(arr[i][rx]==1) flag =true;
-        else if(arr[i][rx] ==3) break;
-    }
-
-    for(int i =rx-1; i>=0; i--){
-        if(arr[ry][i] ==1 )flag =true;
-        else if(arr[ry][i] ==3) break;
+    
+    for(int k=0; k<2; k++){
+      int ry = rookY[k] , rx = rookX[k];
+  
+      for(int i= rx+1; i<8;i++){
+          if(arr[ry][i] ==1) flag = true;
+          else if(arr[ry][i] ==3)break;
+      }
+  
+      for(int i =ry-1; i>=0; i--){
+          if(arr[i][rx]==1) flag =true;
+          else if(arr[i][rx] ==3) break;
+      }
+  
+      for(int i =rx-1; i>=0; i--){
+          if(arr[ry][i] ==1 )flag =true;
+          else if(arr[ry][i] ==3) break;
+      }
+    
+  
+    for(int i =ry+1; i<8; i++){
+          if(arr[i][rx] ==1 )flag =true;
+          else if(arr[i][rx] ==3) break;
+      }
     }
   
-
-  for(int i =ry+1; i<8; i++){
-        if(arr[i][rx] ==1 )flag =true;
-        else if(arr[i][rx] ==3) break;
-    }
-
-    if(flag ==true) printf("1\n");
-    else printf("0\n");
-
-  return 0;
+      if(flag ==true) printf("1\n");
+      else printf("0\n");
+  
+    return 0;
 }
 
 

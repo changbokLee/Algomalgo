@@ -10,30 +10,41 @@ int main() {
   int preveiousFirst;
   
   for(int i =1; i<=n; i++){
-    for(int j=0; j<space; j++)printf("");
+    //1)공백을 출력
+    //2)숫자들을 출력
+    for(int j=0; j<space; j++)printf(" ");
     space--;
     
-    if(i % 2==0){
-      int currentFirst = preveiousFirst +1;
-      if(currentFirst>=10)currentFirst = 1;
+    if(i % 2 == 0){ // 짝수줄 증가하면서 출력
+      int currentFirst = preveiousFirst + 1;
+      if(currentFirst >= 10)currentFirst = 1;
       
       for(int j=0; j<number;j++){
         printf("%d", currentFirst);
+        preveiousFirst = currentFirst;
         currentFirst +=1;
         if(currentFirst>=10) currentFirst =1;
       } 
     }
-    else{
-      int currentFirst = preveiousFirst;
+    
+    
+    else{ //홀수줄  감소하면서 출력
+      int currentFirst; 
       
-      for(int i=0; i<number; i++){
-        currentFirst +-1;
-        if(currentFirst >= 10) currentFirst =1;
+      if(i ==1) currentFirst =s;
+      else{
+      currentFirst= preveiousFirst;
+      
+      for(int j=0; j<number; j++){
+        currentFirst +=1;
+        if(currentFirst >= 10) currentFirst = 1;
       }
+        }
+      
       
       preveiousFirst = currentFirst;
       
-      for(int i= 0; i<number; i++ ){
+      for(int j= 0; j<number; j++ ){
         printf("%d", currentFirst);
         currentFirst -= 1;
         if(currentFirst <=0) currentFirst = 9;

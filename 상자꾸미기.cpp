@@ -5,6 +5,7 @@ int main() {
   //Please Enter Your Code Here
   int n;
   int cnt[1005] = {0,};//색깔에 갯수 배열로 잡아서 했다, 0~1004를 0으로 초기화해라 cnt[1]~2345
+  
   scanf("%d", &n);
   
   for(int i= 0; i<n; i++){
@@ -28,8 +29,8 @@ int main() {
     else validColor +=2;
   }
  
-  if(validColor>=6)printf("Yes\n");
-  else printf("No\n");
+  if(validColor>=6)printf("YES\n");
+  else printf("NO\n");
   
 
   return 0;

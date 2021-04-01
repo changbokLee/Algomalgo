@@ -20,8 +20,8 @@ int main() {
       if(arr[i-1][j] > arr[i][j]&&
         arr[i][j-1] > arr[i][j]&&
         arr[i][j+1] > arr[i][j]&&
-        arr[i+1][j] > arr[i][j])printf("*");
-        else printf("%d" ,arr[i][j]);
+        arr[i+1][j] > arr[i][j])printf("* ");
+        else printf("%d " ,arr[i][j]);
     }
     
     printf("\n");

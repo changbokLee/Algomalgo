@@ -12,15 +12,16 @@ int main() {
 
   for(int i =1; i<=n; i++){
       for(int j=1; j<=n; j++){
-          // ㅑ ㅓ ㅛ ㅌRkwldmlrjflfmfrngka
-          // d이안에 c안에 들어오는가
+          // 1)(i j)(y x) 까지의 거리를구함
+          // 2)이 거리가  c안에 들어오는가
           int first = i -y;
-          int second = j = x;
+          int second = j - x;
 
-          if(first <0) first*= -1;
-          if(second <0) second*= -1;
+          if(first <0) first *= -1;
+          if(second <0) second *= -1;
           
           int dist = first + second;
+          
           if(dist ==0) arr[i][j] = -1;
           else if(dist <=c) arr[i][j] = dist;
           
@@ -29,10 +30,10 @@ int main() {
 
   for(int i = 1; i<=n; i++){
       for(int j =1;j<=n; j++){
-          if(arr[i][j] == -1) printf("x");
-          else printf("%d",arr[i][j]);
+          if(arr[i][j] == -1) printf("x ");
+          else printf("%d ",arr[i][j]);
       }
-printf("\n");
+    printf("\n");
 
      
   }
