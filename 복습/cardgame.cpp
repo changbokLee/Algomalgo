@@ -21,3 +21,8 @@ else if(a_cnt < b_cnt) printf("B\n");
 else printf("D\n");
     return 0 ;
 }
+
+
+
+
+
