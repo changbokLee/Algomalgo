@@ -49,8 +49,8 @@ int main() {
   }
 
    if(compare ==0){
-    for(int i = 0; i<105;i++) big[i] = second[i];
-    for(int i = 0; i<105;i++) small[i] = first[i];
+    for(int i = 0; i<105;i++) big[i] = first[i];
+    for(int i = 0; i<105;i++) small[i] = second[i];
     bigLen = firstLen;
     smallLen = secondLen;
 
