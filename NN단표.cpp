@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-
+// 1234 2458 36912 47 12 6   12? < 13개
 int n;
 long long int k; //longlong 한이유 : 범위때문에
 long long int getorder(long long int x) {
@@ -10,10 +10,11 @@ long long int getorder(long long int x) {
 
   for(int i =1;i<=n; i++){
     if(i*n <x) result +=n;
-    else{
+    
+    else{ 
     if(x *i ==0)result += (x/i)-1;
       else result += x/i;
-}
+   }
   }
 
 return result+1;
@@ -34,9 +35,12 @@ int main(){
    long long int mid =(start +end ) /2;
    long long int myOrder = getorder(mid);
 
-   
-    if(myOrder <= k) start = mid;
+
+
+ if (myOrder <= k) start = mid;
     else end = mid;
+
+   
 
   }
 
