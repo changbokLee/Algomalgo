@@ -5,7 +5,7 @@
 // e 항상3보다 크거나같은값
   //Please Enter Your Code Here
 using namespace std;
-const int MAX = 10005;
+const int MAX = 100005;
 int n, m;
 int data[MAX];
 
@@ -42,7 +42,7 @@ int getStartPoint(int value){
     else return -1;
 
 
-    if(data[n-1] >value) start = n-1;
+    if(data[n-1] >value) end = n-1;
     else{
       if(data[n-1] <value) return -1;
       else return n-1;
