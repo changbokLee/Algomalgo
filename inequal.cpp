@@ -19,7 +19,7 @@ void getMax(int x){
      }
      
      else{
-         for(int i = 0; i>=9; i--){
+         for(int i = 9; i>=0; i--){
              result[x] = i;
             
              if(checkMax[i] ==false){
@@ -83,8 +83,7 @@ void getMin(int x){
                     if(result[x-1] < result[x])
                     flag = true;
                 }
-
-                }
+            }
                 if(flag = true){
                     checkMin[i] = true;
                     getMin(x+1);
@@ -102,7 +101,7 @@ int main() {
     scanf("%d" , &n);
 
     for(int i = 0;i<n;i++){
-        scanf("%c", &myInput[i]);
+        scanf(" %c", &myInput[i]);
     }
     getMax(0);
     getMin(0);

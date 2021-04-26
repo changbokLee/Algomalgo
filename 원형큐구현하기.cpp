@@ -17,7 +17,6 @@ int main() {
 
     if(a ==1) {
         int b;
-    
 
         scanf("%d" , &b);
 
@@ -49,7 +48,7 @@ else if(a ==2){
 
 else{
     if(numElemnet <=0) printf("NULL\n");
-    else printf("%d\n" , &myQueue[front]);
+    else printf("%d\n" , myQueue[front]);
 }
     }
   return 0;
