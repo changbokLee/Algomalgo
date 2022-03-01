@@ -29,7 +29,7 @@ int main() {
   }
 
   else if (b ==c && a!=b){
-    r =1000 + 100*b;
+    r =1000 + 100*b;  
   }
 
   else {
